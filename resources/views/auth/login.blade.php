@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 offset-4 titulo-login-pao">

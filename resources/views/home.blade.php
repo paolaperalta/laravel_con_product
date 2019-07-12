@@ -72,7 +72,7 @@
   <!--/ Property End /-->
 
 
-  <!--/ Agents Star /-->
+  <!--/ Productos /-->
   <section class="section-agents section-t4">
     <div class="container-fluid">
       <div class="row">
@@ -137,9 +137,9 @@
       </div>
     </div>
   </section>
-  <!--/ Agents End /-->
+  <!--/ Productos fin /-->
 
-  <!--/ News Star /-->
+  <!--/ Macetas /-->
   <section class="section-news section-t8">
     <div class="container-fluid">
 
@@ -156,7 +156,7 @@
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="#">Maceta Paola</a>
+                    <a href="#">Macetas</a>
                   </h2>
                 </div>
 
@@ -178,7 +178,7 @@
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="blog-single.html">Cactus</a>
+                    <a href="blog-single.html">Plantas</a>
                   </h2>
                 </div>
               </div>
@@ -197,7 +197,7 @@
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="blog-single.html">Lampara</a>
+                    <a href="blog-single.html">Deco</a>
                   </h2>
                 </div>
               </div>
@@ -230,7 +230,7 @@
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
               <img src="img/prod4.jpg" alt="" class="img-b img-fluid">
-            </div>
+            </div> 
             <div class="card-overlay">
               <div class="card-header-b">
                 <div class="card-category-b">
@@ -238,12 +238,12 @@
                 </div>
                 <div class="card-title-b">
                   <h2 class="title-2">
-                    <a href="#">Lampara</a>
+                    <a href="#">Iluminación</a>
                   </h2>
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
 
 
@@ -252,9 +252,9 @@
       </div>
     </div>
   </section>
-  <!--/ News End /-->
+  <!--/ Macetas fin /-->
 
-  <!--/ Testimonials Star /-->
+  <!--/ Contacto /-->
   <section class="section-testimonials section-t8">
     <div class="container">
       <div class="row">
@@ -290,5 +290,5 @@
       </div>
     </div>
   </section>
-  <!--/ Testimonials End /-->
+  <!--/ Contacto fin /-->
 @endsection

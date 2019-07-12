@@ -18,7 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/product', 'ProductController@index')->name('producto');
+
 
 Route::get('/macetas', function() {
   return view ('macetas');
+});
+
+Route::get('/product', function(){
+  return view ('product');
 });
