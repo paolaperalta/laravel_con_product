@@ -157,6 +157,7 @@
     <script src="{{ asset('js/owl.carousel.js') }}"></script>
     <script src="{{ asset('js/scrollreveal.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}" ></script>
+    <script src="{{asset('js/app-prod.js')}}"></script>
 
 
 
