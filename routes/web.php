@@ -28,3 +28,13 @@ Route::get('/macetas', function() {
 Route::get('/product', function(){
   return view ('product');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function () {
+  Route::resource('/products', 'AdminProductController');
+  Route::resource('/users', 'AdminUserController');
+});
+
+Route::get('/edit/{id}', 'UserUpdate@edit')->middleware('auth')->name('edit');
+Route::put('/update/{id}', 'UserUpdate@update')->name('update');
+
+Route::get('/profile', "UserController@show")->name("profile")->middleware('auth');

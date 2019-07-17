@@ -36,4 +36,57 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    public function show()
+    {
+        return  view("auth.login");
+    }
+
+    public function redirectToProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+
+    public function handleProviderCallback($provider)
+    {
+        try{
+            $user = Socialite::driver($provider)->user();
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            abort(403, 'Unauthorized action.');
+            return redirect()->to('/');
+        }
+        $attributes = [
+            'provider' => $provider,
+            'provider_id' => $user->getId(),
+            'name' => $user->getName(),
+            'email' => $user->getEmail(),
+            'password' => isset($attributes['password']) ? $attributes['password'] : bcrypt(str_random(16))
+
+        ];
+
+        $user = User::where('provider_id', $user->getId() )->first();
+        if (!$user){
+            try{
+
+                if (isset($attributes['email'])) {
+                  Validator::make(['email' => $attributes['email']],
+                  ['email' => 'unique:users,email'])->validate();
+
+
+                }
+
+                $user=  User::create($attributes);
+            }catch (ValidationException $e){
+              return redirect()->to('/auth/login');
+            }
+        }
+
+        $this->guard()->login($user);
+       return redirect()->to($this->redirectTo);
+
+
+
+    }
+
 }
